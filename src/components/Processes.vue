@@ -41,7 +41,6 @@
 					name: '',
 					timeEnd: null
 				})
-
             }
         }
     }
