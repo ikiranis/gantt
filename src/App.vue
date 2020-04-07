@@ -2,33 +2,37 @@
   <div id="app" class="container">
     <h1>Create Gantt Charts for CPU Processes</h1>
 
-    <div class="row">
+    <div class="row mt-5">
       <processes :processes="processes" class="mx-auto" />
     </div>
+
+    <div class="row mt-5 mb-5">
+      <gantt :processes="processes" class="mx-auto" />
+    </div>
+
   </div>
 </template>
 
 <script>
   import processes from "@/components/Processes"
+  import gantt from "@/components/Gantt"
+
 export default {
   name: 'App',
-  components: { processes },
+  components: { processes, gantt },
 
   data() {
     return {
       processes: [
         {
-          id: 0,
           name: 'P1',
           timeEnd: 10
         },
         {
-          id: 1,
           name: 'P2',
           timeEnd: 20
         },
         {
-          id: 2,
           name: 'P3',
           timeEnd: 30
         }

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-for="process in processes" :key="process.id">
+        <div v-for="process in processes">
             <div class="form-group row">
                 <div class="col-lg-8">
                     <input id="name" type="text" class="form-control"
@@ -37,11 +37,15 @@
         methods: {
     		addProcess()
             {
-            	this.processes.push({
-                    id: null,
-                    name: '',
-                    timeEnd: null
-                })
+            	let newData = {
+					name: '',
+					timeEnd: null
+				}
+
+				this.$set(this.processes, this.processes.length, newData)
+
+				// this.processes.push(newData)
+
             }
         }
     }
