@@ -1,4 +1,4 @@
-# gantt
+# Create gantt charts for CPU processes
 
 ## Project setup
 ```
