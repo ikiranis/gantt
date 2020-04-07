@@ -3,9 +3,10 @@
         <h1>Gantt Chart</h1>
 
         <div class="row mt-5">
-            <span v-for="process in processes" class="col">
+            <div v-for="process in processes" class="col">
+
                 {{ process.name }}
-            </span>
+            </div>
         </div>
     </div>
 

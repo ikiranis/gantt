@@ -37,14 +37,10 @@
         methods: {
     		addProcess()
             {
-            	let newData = {
+				this.processes.push({
 					name: '',
 					timeEnd: null
-				}
-
-				this.$set(this.processes, this.processes.length, newData)
-
-				// this.processes.push(newData)
+				})
 
             }
         }
