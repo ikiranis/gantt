@@ -1,5 +1,9 @@
 # Create gantt charts for CPU processes
 
+## Install node/npm
+
+https://nodejs.org
+
 ## Project setup
 ```
 npm install
