@@ -115,7 +115,7 @@
 <style scoped>
     .processBlock {
         display: block;
-        font-size: 1.5em;
+        font-size: 1.3em;
         outline-color: black;
         outline-style: solid;
         outline-width: 2px;
