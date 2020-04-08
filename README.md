@@ -1,5 +1,7 @@
 # Create gantt charts for CPU processes
 
+![image]
+
 ## Install node/npm
 
 https://nodejs.org
@@ -18,11 +20,4 @@ npm run serve
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[image]: https://blog-api.error.gr/wp-content/uploads/2020/04/gantt-1536x792.png
