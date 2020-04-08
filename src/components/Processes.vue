@@ -1,8 +1,8 @@
 <template>
     <div class="container col-lg-6">
-        <div v-for="process in processes">
+        <div v-for="(process, index) in processes">
             <div class="form-group row">
-                <div class="col-lg-8">
+                <div class="col-lg-6">
                     <input id="name" type="text" class="form-control"
                            v-model="process.name"
                            placeholder="Process Name" required maxlength="20">
@@ -12,10 +12,12 @@
                            v-model="process.timeEnd"
                            placeholder="Time End" required min="1" max="99">
                 </div>
+
+                <button class="btn btn-danger col" @click="removeProcess(index)">Remove</button>
             </div>
         </div>
 
-        <button class="btn btn-info" name="add" @click="addProcess">Add process</button>
+        <button class="btn btn-success" name="add" @click="addProcess">Add process</button>
     </div>
 </template>
 
@@ -35,12 +37,15 @@
         },
 
         methods: {
-    		addProcess()
-            {
+    		addProcess() {
 				this.processes.push({
 					name: '',
 					timeEnd: null
 				})
+            },
+
+            removeProcess(index) {
+            	this.processes.splice(index, 1)
             }
         }
     }
