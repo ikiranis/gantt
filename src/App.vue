@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container">
+  <div id="app" class="container-fluid">
     <h1>Create Gantt Charts for CPU Processes</h1>
 
     <div class="row mt-5">

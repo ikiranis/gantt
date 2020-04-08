@@ -1,12 +1,12 @@
 <template>
-    <div>
+    <div class="px-5">
         <h1>Gantt Chart</h1>
 
         <div class="row mt-5">
             <div v-for="(process, index) in processes">
                 <div class="text-white processBlock"
                       :style="'width: '+ calculateProcessTime(index)
-                      + 'em; background-color: ' + getColor(process.name)">
+                      + 'em; background-color: ' + getProcessColor(process.name)">
                     {{ process.name }}
                 </div>
 
@@ -87,14 +87,22 @@
             },
 
 			calculateProcessTime(index) {
+				let lastProcess = this.processes[this.processes.length-1]
+                let ratio = 1
+
 				if (index === 0) {
 					return this.processes[index].timeEnd
 				}
 
-				return this.processes[index].timeEnd - this.processes[index-1].timeEnd
+				if (lastProcess.timeEnd > 40) {
+					ratio = parseInt(lastProcess.timeEnd / 45) + 1
+                    console.log(ratio)
+                }
+
+				return ((this.processes[index].timeEnd - this.processes[index-1].timeEnd) * 2) / ratio
 			},
 
-            getColor(processName) {
+            getProcessColor(processName) {
 				let found = this.processColors.find(item => {
 					return item.name === processName
                 })

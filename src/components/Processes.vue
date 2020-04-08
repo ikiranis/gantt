@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container col-lg-6">
         <div v-for="process in processes">
             <div class="form-group row">
                 <div class="col-lg-8">
