@@ -5,7 +5,7 @@
                 <div class="col-lg-6">
                     <input id="name" type="text" class="form-control"
                            v-model="process.name"
-                           placeholder="Process Name" required maxlength="20">
+                           placeholder="Process Name" required maxlength="3">
                 </div>
                 <div class="col-lg-4">
                     <input id="timeEnd" type="number" class="form-control"
@@ -38,9 +38,11 @@
 
         methods: {
     		addProcess() {
+				let lastProcess = this.processes[this.processes.length-1]
+
 				this.processes.push({
 					name: '',
-					timeEnd: null
+					timeEnd: parseInt(lastProcess.timeEnd) + 1
 				})
             },
 

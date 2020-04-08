@@ -7,7 +7,7 @@
                 <div class="text-white processBlock"
                       :style="'width: '+ calculateProcessTime(index)
                       + 'em; background-color: ' + getProcessColor(process.name)">
-                    {{ process.name }}
+                    <span>{{ (process.name) !== '' ? process.name : '?' }}</span>
                 </div>
 
                 <div class="row mt-1">
