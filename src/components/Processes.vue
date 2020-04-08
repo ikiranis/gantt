@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <button class="btn btn-success" name="add" @click="addProcess">Add process</button>
+        <button class="btn btn-success col-12 col-lg-6" name="add" @click="addProcess">Add process</button>
     </div>
 </template>
 
