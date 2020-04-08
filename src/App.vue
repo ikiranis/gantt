@@ -6,8 +6,14 @@
       <processes :processes="processes" class="mx-auto" />
     </div>
 
-    <div class="row mt-5 mb-5">
+    <div class="row mt-5">
       <gantt :processes="processes" class="mx-auto" />
+    </div>
+
+    <div class="row mt-5">
+      <div class="mx-auto">
+        Created by <strong>Yiannis Kiranis</strong> (2020)<br><a href="https://apps4net.eu">apps4net.eu</a>
+      </div>
     </div>
 
   </div>
