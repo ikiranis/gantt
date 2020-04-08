@@ -90,14 +90,13 @@
 				let lastProcess = this.processes[this.processes.length-1]
                 let ratio = 1
 
-				if (index === 0) {
-					return this.processes[index].timeEnd
-				}
-
 				if (lastProcess.timeEnd > 40) {
-					ratio = parseInt(lastProcess.timeEnd / 45) + 1
-                    console.log(ratio)
+					ratio = parseInt(lastProcess.timeEnd / 40) + 1
                 }
+
+				if (index === 0) {
+					return (this.processes[index].timeEnd * 2) / ratio
+				}
 
 				return ((this.processes[index].timeEnd - this.processes[index-1].timeEnd) * 2) / ratio
 			},
