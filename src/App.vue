@@ -12,7 +12,9 @@
 
     <div class="row mt-5">
       <div class="mx-auto">
-        Created by <strong>Yiannis Kiranis</strong> (2020)<br><a href="https://apps4net.eu">apps4net.eu</a>
+        Created by <strong>Yiannis Kiranis</strong> (2020)
+        <br><a href="https://apps4net.eu">apps4net.eu</a> |
+        <a href="https://github.com/ikiranis/gantt">Source code</a>
       </div>
     </div>
 
