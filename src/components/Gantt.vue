@@ -1,22 +1,22 @@
 <template>
-    <div class="px-5">
-        <h1>Gantt Chart</h1>
+	<div class="px-5">
+		<h1>Gantt Chart</h1>
 
-        <div class="row mt-5">
-            <div v-for="(process, index) in processes">
-                <div class="text-white processBlock"
-                     :style="'width: '+ calculateProcessTime(index)
+		<div class="row mt-5">
+			<div v-for="(process, index) in processes">
+				<div class="text-white processBlock"
+					 :style="'width: '+ calculateProcessTime(index)
                       + 'em; background-color: ' + getProcessColor(process.name)">
-                    <span>{{ (process.name) !== '' ? process.name : '?' }}</span>
-                </div>
+					<span>{{ (process.name) !== '' ? process.name : '?' }}</span>
+				</div>
 
-                <div class="row mt-1">
-                    <div v-if="index === 0" class="mr-auto ml-3">0</div>
-                    <div class="ml-auto mr-3">{{ process.timeEnd }}</div>
-                </div>
-            </div>
-        </div>
-    </div>
+				<div class="row mt-1">
+					<div v-if="index === 0" class="mr-auto ml-3">0</div>
+					<div class="ml-auto mr-3">{{ process.timeEnd }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </template>
 
@@ -113,11 +113,11 @@
 </script>
 
 <style scoped>
-    .processBlock {
-        display: block;
-        font-size: 1.3em;
-        outline-color: black;
-        outline-style: solid;
-        outline-width: 2px;
-    }
+	.processBlock {
+		display: block;
+		font-size: 1.3em;
+		outline-color: black;
+		outline-style: solid;
+		outline-width: 2px;
+	}
 </style>
