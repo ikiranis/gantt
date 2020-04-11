@@ -22,33 +22,31 @@
 </template>
 
 <script>
-    export default {
-    	data() {
-    		return {
+	export default {
+		data() {
+			return {}
+		},
 
-            }
-        },
-
-    	props: {
-    		processes: {
+		props: {
+			processes: {
 				required: true,
 				type: Array
-            }
-        },
+			}
+		},
 
-        methods: {
-    		addProcess() {
-				let lastProcess = this.processes[this.processes.length-1]
+		methods: {
+			addProcess() {
+				let lastProcess = this.processes[this.processes.length - 1]
 
 				this.processes.push({
 					name: '',
 					timeEnd: parseInt(lastProcess.timeEnd) + 1
 				})
-            },
+			},
 
-            removeProcess(index) {
-            	this.processes.splice(index, 1)
-            }
-        }
-    }
+			removeProcess(index) {
+				this.processes.splice(index, 1)
+			}
+		}
+	}
 </script>

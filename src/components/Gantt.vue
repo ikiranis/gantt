@@ -5,7 +5,7 @@
         <div class="row mt-5">
             <div v-for="(process, index) in processes">
                 <div class="text-white processBlock"
-                      :style="'width: '+ calculateProcessTime(index)
+                     :style="'width: '+ calculateProcessTime(index)
                       + 'em; background-color: ' + getProcessColor(process.name)">
                     <span>{{ (process.name) !== '' ? process.name : '?' }}</span>
                 </div>
@@ -24,21 +24,21 @@
 	export default {
 		data() {
 			return {
-                processColors: [],
+				processColors: [],
 
-                colors: [
-                    'green',
-                    'blueviolet',
-                    'burlywood',
-                    'darkgreen',
-                    'crimson',
-                    'darkolivegreen',
-                    'indigo',
-                    'darkslateblue',
-                    'mediumorchid',
+				colors: [
+					'green',
+					'blueviolet',
+					'burlywood',
+					'darkgreen',
+					'crimson',
+					'darkolivegreen',
+					'indigo',
+					'darkslateblue',
+					'mediumorchid',
 					'goldenrod',
-                    'orangered'
-                ]
+					'orangered'
+				]
 			}
 		},
 
@@ -49,21 +49,21 @@
 			}
 		},
 
-        computed: {
+		computed: {
 			//
-        },
+		},
 
-        watch:  {
+		watch: {
 			processes: {
 				deep: true,
 
-                handler() {
+				handler() {
 					this.getProcessColors()
-                }
-            }
-        },
+				}
+			}
+		},
 
-        created() {
+		created() {
 			this.getProcessColors()
 		},
 
@@ -79,35 +79,35 @@
 							color: this.colors[color]
 						})
 
-                        color = (color === 10) ? 0 : color + 1
+						color = (color === 10) ? 0 : color + 1
 					}
 				})
 
 				this.processColors = uniqueProcesses
-            },
+			},
 
 			calculateProcessTime(index) {
-				let lastProcess = this.processes[this.processes.length-1]
-                let ratio = 1
+				let lastProcess = this.processes[this.processes.length - 1]
+				let ratio = 1
 
 				if (lastProcess.timeEnd > 40) {
 					ratio = parseInt(lastProcess.timeEnd / 40) + 1
-                }
+				}
 
 				if (index === 0) {
 					return (this.processes[index].timeEnd * 2) / ratio
 				}
 
-				return ((this.processes[index].timeEnd - this.processes[index-1].timeEnd) * 2) / ratio
+				return ((this.processes[index].timeEnd - this.processes[index - 1].timeEnd) * 2) / ratio
 			},
 
-            getProcessColor(processName) {
+			getProcessColor(processName) {
 				let found = this.processColors.find(item => {
 					return item.name === processName
-                })
+				})
 
-                return found.color
-            }
+				return found.color
+			}
 		}
 	}
 </script>
