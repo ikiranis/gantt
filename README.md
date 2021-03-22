@@ -11,12 +11,12 @@ https://nodejs.org
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compile and run for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compile for production
 ```
 npm run build
 ```
